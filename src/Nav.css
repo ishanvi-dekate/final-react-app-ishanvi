@@ -1,5 +1,5 @@
-ul {
-    background-color: rgb(34, 93, 87);
+#navbar ul {
+    background-color: #FF9978;
     display: flex;
     justify-content: center; 
     align-items: center;
@@ -9,11 +9,16 @@ ul {
     padding: 15;
     flex-wrap: wrap;
     border-radius: 10px;
-}
-
-li {
+  }
+  
+#navbar ul li {
     color: white;
     text-decoration: none;
     padding: 15px;
     transition: background-color 0.3s ease;
-}
+  }
+  
+#navbar a:hover {
+    background-color: #FFBAAB;
+    border-radius: 4px;
+  }

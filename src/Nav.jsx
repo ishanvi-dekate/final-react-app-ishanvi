@@ -1,14 +1,16 @@
 import './Nav.css'
 
-function Nav(){
+function Nav({ setPage }){
     return (
-        <div>
+        <>
+        <div id="navbar">
             <ul>
-                <li>Home</li>
-                <li>Symptoms</li>
-                <li>Prevention</li>
+                <li onClick={() => setPage("home")}>Home</li>
+                <li onClick={() => setPage("symptoms")}>Symptoms</li>
+                <li onClick={() => setPage("prevention")}>Prevention</li>
             </ul>
         </div>
+        </>
     )
 }
 

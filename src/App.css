@@ -73,7 +73,27 @@ form input, form button {
 }
 
 button {
-  background-color: #033944;
+  background-color: #92A0C6;
   color: white;
   margin: 1rem;
+}
+
+#myDIV ul li {
+  list-style-type: none;
+}
+
+body {
+  background-color: #7F81A9;
+}
+
+ul {
+  text-align: left;
+}
+
+a {
+  color: #FFBAAB;
+}
+
+main {
+  color: white;
 }

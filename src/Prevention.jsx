@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function Prevention() {
@@ -9,10 +7,8 @@ function Prevention() {
   return (
     <>
     <main>
-        <body>
-            <h3>Prevention</h3>
-        </body>
         <section>
+            <h3>Prevention Methods</h3>
             <p>Some ways to reduce the risks of osteoporosis and to prevent getting it include: 
             <ul>
                 <li>Plenty of exercise</li>

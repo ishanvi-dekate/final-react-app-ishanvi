@@ -22,7 +22,6 @@ function Card({name, description}){
             <button onClick={() => setCount(count+1)}>Add {name} to cart</button>
             <button onClick={() => setCount(0)}>Reset</button>
             <p>Total {name}: {count}</p>
-            <p>Your cart {cart}</p>
         </div>
     )
 }

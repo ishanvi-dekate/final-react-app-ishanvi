@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function Symptoms() {
@@ -8,16 +6,6 @@ function Symptoms() {
 
   return (
     <>
-    <header>
-        <div id="navbar">
-            <ul>
-                <li><a href="App.jsx">Home</a></li>
-                <li><a href="Symptoms.jsx">Symptoms/Risk Factors</a></li>
-                <li><a href="Preventation.jsx">Prevention/Treatments</a></li>
-            </ul>
-        </div>
-    </header>
-    
     <main>
         <section>
             <h3>Main Symptoms</h3>

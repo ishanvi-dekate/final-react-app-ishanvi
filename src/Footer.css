@@ -1,7 +1,8 @@
 footer {
-    background-color: rgb(34, 93, 87);
+    background-color: #FF9978;
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
     border-radius: 10px;
+    color: white;
   }
