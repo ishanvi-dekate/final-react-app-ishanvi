@@ -5,6 +5,27 @@ import './App.css'
 function Home() {
   const [count, setCount] = useState(0)
 
+  const [apiData1, setApiData1] = useState('');
+  const [apiData2, setApiData2] = useState('');
+  const fetchDogImage = async () => {
+    try {
+      const response = await fetch('https://dog.ceo/api/breeds/image/random');
+      const data = await response.json();
+      setApiData1(data.message); // "message" is the field of the image URL
+    } catch (error) {
+      console.error('Error fetching dog image:', error);
+    }
+  };
+  const fetchFox = async () => {
+    try {
+        const response = await fetch('https://randomfox.ca/floof/');
+        const data = await response.json();
+        setApiData2(data.message);
+    } catch (error) {
+        console.error('Error fetching joke', error);
+    }
+  };
+
   return (
     <>
     <main>
@@ -35,9 +56,16 @@ function Home() {
                 <li><a href="https://www.fda.gov/consumers/womens-health-topics/osteoporosis">US Food and Drug Administration</a></li>
             </ul>
         </div>
+
     </main>
     <Card name="Times you've been to doctor" description="Change the number to match the amount of times you've visited the doctor" />
     <Card name="Times you've been prescribed medicine" description="Change the number to match the amount of times you've been prescribed medicine" />
+    
+    <button onClick={fetchDogImage}>Fetch Dog Image</button>
+            {apiData1 && <img src={apiData1} alt="Random Dog" />}
+
+    <button onClick={fetchFox}>Fetch Fox</button>
+            {apiData2 && <img src={apiData2} alt="Random Fox"/>}
     </>
   )
 }
