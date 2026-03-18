@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import './App.css'
 import Nav from './Nav.jsx'
-import Card from './Card.jsx'
 import Home from './Home.jsx'
 import Symptoms from './Symptoms.jsx'
 import Prevention from './Prevention.jsx'

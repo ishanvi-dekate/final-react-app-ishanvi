@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import Card from './Card.jsx'
 import './App.css'
+import myFunction from './script.js'
 
 function Home() {
   const [count, setCount] = useState(0)
 
   const [apiData1, setApiData1] = useState('');
-  const [apiData2, setApiData2] = useState('');
+
   const fetchDogImage = async () => {
     try {
       const response = await fetch('https://dog.ceo/api/breeds/image/random');
@@ -14,15 +15,6 @@ function Home() {
       setApiData1(data.message); // "message" is the field of the image URL
     } catch (error) {
       console.error('Error fetching dog image:', error);
-    }
-  };
-  const fetchFox = async () => {
-    try {
-        const response = await fetch('https://randomfox.ca/floof/');
-        const data = await response.json();
-        setApiData2(data.message);
-    } catch (error) {
-        console.error('Error fetching joke', error);
     }
   };
 
@@ -44,7 +36,8 @@ function Home() {
 
         <h4>Now lets go into the specifics of the disease and what someone can do to prevent it.</h4>
 
-        <button>Below are more links on Osteoporosis</button>
+        <myFunction/>
+        <button> Below are more link on osteoporosis </button>
 
         <div id="myDIV">
             <ul>
@@ -63,9 +56,6 @@ function Home() {
     
     <button onClick={fetchDogImage}>Fetch Dog Image</button>
             {apiData1 && <img src={apiData1} alt="Random Dog" />}
-
-    <button onClick={fetchFox}>Fetch Fox</button>
-            {apiData2 && <img src={apiData2} alt="Random Fox"/>}
     </>
   )
 }

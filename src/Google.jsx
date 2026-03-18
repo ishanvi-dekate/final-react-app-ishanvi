@@ -4,7 +4,7 @@ import { db, auth, provider } from './firebase'; // Custom Firebase config
 import { signInWithPopup, signOut, onAuthStateChanged } from 'firebase/auth'; // Auth methods
 import { collection, getDocs } from 'firebase/firestore'; // Firestore methods
 
-function Google() {
+function GoogleLogin() {
   // State to hold the logged-in user
   const [user, setUser] = useState(null);
 
@@ -73,7 +73,6 @@ function Google() {
   // UI rendering
   return (
     <div>
-      <h1>Firebase + React App with Google Log-in</h1>
       {/* If user is logged in, show greeting, logout button, and messages */}
       {user ? (
         <div>
@@ -98,4 +97,4 @@ function Google() {
     </div>
   );
 }
-export default Google;
+export default GoogleLogin;
